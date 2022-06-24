@@ -1,0 +1,45 @@
+.location{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    @media (max-width: 426px){
+        justify-content: space-between;
+        gap: 20px;
+    }
+    .wrapper{
+        .city{
+            font-size: 38px;
+            line-height: 36px;
+            font-weight: 500;
+            @media (max-width: 426px){
+                font-size: 32px;
+            }
+            @media (max-width: 376px){
+                font-size: 28px;
+            }
+        }
+        .country{
+            font-size: 14px;
+            @media (max-width: 376px){
+                font-size: 12px;
+            }
+            @media (max-width: 321px){
+                display: none;
+            }
+        }
+        .date{
+            font-size: 18px;
+            font-weight: 500;
+            @media (max-width: 426px){
+                font-size: 14px;
+            }
+            @media (max-width: 376px){
+                font-size: 12px;
+            }
+            @media (max-width: 321px){
+                display: none;
+            }
+        }
+    }
+}

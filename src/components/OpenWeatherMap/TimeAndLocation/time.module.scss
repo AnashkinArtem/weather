@@ -1,0 +1,88 @@
+.wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    @media (max-width: 321px){
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .date{
+        max-width: 220px;
+        width: 100%;
+        &__time{
+            font-size: 48px;
+            font-weight: 500;
+            @media (max-width: 426px){
+                font-size: 42px;
+            }
+            @media (max-width: 376px){
+                font-size: 38px;
+            }
+            @media (max-width: 321px){
+                text-align: center;
+            }
+        }
+        &__descr{
+            margin-bottom: 5px;
+            @media (max-width: 426px){
+                font-size: 14px;
+                font-weight: 500;
+            }
+            @media (max-width: 321px){
+                text-align: center;
+            }
+        }
+        .events{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            @media (max-width: 321px){
+                justify-content: center;
+            }
+            .time__wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .time{
+                    text-align: center;
+                    font-size: 14px;
+                    background-color: rgba(0, 0, 0, 0.4);
+                    padding: 1px;
+                    border-radius: 5px;
+                    width: 50px;
+                    @media (max-width: 426px){
+                        font-size: 12px;
+                    }
+                }
+            }
+            .title__wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                .title{
+                    font-size: 14px;
+                    @media (max-width: 426px){
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .location{
+        &__city{
+            font-size: 30px;
+            font-weight: 500;
+            @media (max-width: 426px){
+                font-size: 24px;
+            }
+            @media (max-width: 321px){
+                font-size: 22px;
+            }
+        }
+        &__country{
+            font-size: 14px;
+            text-align: end;
+        }
+    }
+}
