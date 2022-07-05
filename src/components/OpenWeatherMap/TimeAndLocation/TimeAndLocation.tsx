@@ -13,8 +13,6 @@ interface IProps {
 const TimeAndLocation: React.FC<IProps> = ({weather}): JSX.Element => {
 
 const Events = eventsData.filter((event) => moment().format('l') === moment(event.dt).format('l'))
-const EventTitle = Object.values(Events[0].event)
-const EventTime = Object.keys(Events[0].event)
 
 return (
     <>
@@ -26,10 +24,10 @@ return (
                     Events.length ?
                         <div className={s.events}>
                             <div className={s.time__wrapper} >
-                                {EventTime.map((time) => <div className={s.time} key={Math.random()}>{time}</div>)}
+                                {Object.keys(Events[0].event).map((time) => <div className={s.time} key={Math.random()}>{time}</div>)}
                             </div>
                             <div className={s.title__wrapper}>
-                                {EventTitle.map((title) => <div className={s.title} key={Math.random()}>{title}</div>)}
+                                {Object.values(Events[0].event).map((title) => <div className={s.title} key={Math.random()}>{title}</div>)}
                             </div>           
                         </div>
                     : null
