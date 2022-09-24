@@ -1,6 +1,7 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit'
-import { getCurrentAndForecastWeatherApi } from 'src/api/apiWeatherApi'
+import { API_KEY, getCurrentAndForecastWeatherApi } from 'src/api/apiWeatherApi'
 import { WeatherApiData } from 'src/utils/interface/interface';
+
 
 type CurrentWeatherApi = WeatherApiData
 
@@ -13,7 +14,7 @@ type CurrentWeatherApiState = {
 export const getWeatherApi = createAsyncThunk<CurrentWeatherApi, undefined, {rejectValue: string}>(
     'weather/getWeatherApi',
     async (_, { rejectWithValue}) => {
-        const res = await fetch('http://api.weatherapi.com/v1/forecast.json?key=991ff4ee19624ffe8da123038221806&q=paris&days=3&aqi=no&alerts=no')
+        const res = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=paris&days=3&aqi=no&alerts=no`)
 
         if(!res.ok){
             return rejectWithValue('Server Error');

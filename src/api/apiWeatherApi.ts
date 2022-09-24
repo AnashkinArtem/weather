@@ -9,4 +9,4 @@ const getCurrentAndForecastWeatherApi = (city: string) => {
 }
 
 
-export { getCurrentAndForecastWeatherApi }
+export { getCurrentAndForecastWeatherApi, API_KEY }
