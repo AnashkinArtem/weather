@@ -11,12 +11,12 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import openWeatherMapSlice from './features/openWeatherMapSlice';
-import weatherApiSlice from './features/weatherApiSlice';
+import openWeatherMapReducer from './features/openWeatherMapSlice';
+import weatherApiReducer from './features/weatherApiSlice';
 
 const rootReducer = combineReducers({
-  weather: openWeatherMapSlice,
-  weatherApi: weatherApiSlice
+  weather: openWeatherMapReducer,
+  weatherApi: weatherApiReducer
 });
 
 const persistConfig = {
