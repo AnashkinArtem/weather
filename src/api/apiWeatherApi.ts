@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const URL_BASE = 'http://api.weatherapi.com/v1/'
+const URL_BASE = 'https://api.weatherapi.com/v1/'
 
 const API_KEY = '991ff4ee19624ffe8da123038221806'
 
